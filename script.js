@@ -32,6 +32,24 @@ const calcular = () => {
     }
     resultado.innerHTML = res.toFixed(2)
   }
+  if (unidadOrigen === unidadDestino) {
+    // Impedir que el usuario seleccione la misma unidad de origen y destino
+    let optionList = select2.options;
+    for (let i = 0; i < optionList.length; i++) {
+      if (optionList[i].text === unidadOrigen) {
+        optionList[i].disabled = true;
+        optionList[i].selected = false;
+      } else {
+        optionList[i].disabled = false;
+      }
+    }
+  } else {
+    // Habilitar todas las opciones
+    let optionList = selectDestino.options;
+    for (let i = 0; i < optionList.length; i++) {
+      optionList[i].disabled = false;
+    }
+  }
   formulas()
   temperatura.addEventListener("input", () => {
     formulas()
