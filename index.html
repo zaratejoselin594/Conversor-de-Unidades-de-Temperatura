@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="contenidoo">
+      <h1>Conversor de Unidades de Temperatura</h1>
+      <div class="contenido">
+        <div class="gradoUno">
+          <input class="grados" type="number" id="temp">
+          <select id="selectOrigen" onchange="calcular()">
+            <option>Celsius</option>
+            <option>Fahrenheit</option>
+            <option>Kelvin</option>
+          </select>
+        </div>
+        <p>=</p>
+        <div class="gradoDos">
+          <p class="grados" id="resultado"></p>
+          <select id="selectDestino" onchange="calcular()">
+            <option>Fahrenheit</option>
+            <option>Celsius</option>
+            <option>Kelvin</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

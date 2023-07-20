@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Indie+Flower&family=M+PLUS+2:wght@100;300;400&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+}
+.contenedor{
+  width: 100%;
+  height: 100vh;
+  background-color: #b18aff;
+}
+.gradoUno, .gradoDos{
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  text-align: center;
+}
+.contenedor, .contenido, .contenidoo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenidoo{
+  width: 40em;
+  height: 35em;
+  flex-direction: column;
+  background-color: #95f;
+}
+#temp, #resultado{
+  border: none;
+  border-radius: .5em;
+  outline: none;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  background-color: #333;
+}
+#temp{
+  width: 15rem;
+  height: 4rem;
+}
+#resultado{
+  padding: .7em 3.5em;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select, option{
+  background-color: #95f;
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-size: 20px;
+  box-shadow: none;
+}
+select option:checked {
+  background-color: #b685ff;
+}
+
+
