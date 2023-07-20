@@ -30,7 +30,9 @@ const calcular = () => {
         res = parseFloat(temp - 273.15) * 9 / 5 + 32;
       }
     }
-    resultado.innerHTML = res.toFixed(2)
+    if (res !== undefined && res !== null) { // verificamos si el valor NO es undefined ni null
+      resultado.innerHTML = res.toFixed(2); // llamamos al método toFixed
+    }
   }
   if (unidadOrigen === unidadDestino) {
     // Impedir que el usuario seleccione la misma unidad de origen y destino
