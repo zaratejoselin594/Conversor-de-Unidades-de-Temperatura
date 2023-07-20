@@ -5,7 +5,7 @@ const calcular = () => {
   const select = document.getElementById("selectOrigen");
   const unidadOrigen = select.options[select.selectedIndex].text;
   const select2 = document.getElementById("selectDestino");
-  const unidadDestino = select2.options[select2.selectedIndex].text;
+  let unidadDestino = select2.options[select2.selectedIndex].text;
   console.log(unidadOrigen)
   console.log(unidadDestino)
   const formulas = () => {
@@ -30,7 +30,7 @@ const calcular = () => {
         res = parseFloat(temp - 273.15) * 9 / 5 + 32;
       }
     }
-    if (res !== undefined && res !== null) { // verificamos si el valor NO es undefined ni null
+    if (res !== undefined && res !== null ) { // verificamos si el valor NO es undefined ni null
       resultado.innerHTML = res.toFixed(2); // llamamos al método toFixed
     }
   }
@@ -42,6 +42,8 @@ const calcular = () => {
         optionList[i].disabled = true;
         optionList[i].selected = false;
       } else {
+        unidadDestino = optionList[i].text;
+        console.log("option " + optionList[i].text)
         optionList[i].disabled = false;
       }
     }
