@@ -6,8 +6,7 @@ const calcular = () => {
   const unidadOrigen = select.options[select.selectedIndex].text;
   const select2 = document.getElementById("selectDestino");
   let unidadDestino = select2.options[select2.selectedIndex].text;
-  console.log(unidadOrigen)
-  console.log(unidadDestino)
+
   const formulas = () => {
     let temp = temperatura.value;
     let res;
@@ -30,20 +29,25 @@ const calcular = () => {
         res = parseFloat(temp - 273.15) * 9 / 5 + 32;
       }
     }
-    if (res !== undefined && res !== null ) { // verificamos si el valor NO es undefined ni null
-      resultado.innerHTML = res.toFixed(2); // llamamos al método toFixed
+    if (res !== undefined || res !== null || res !== NaN) { 
+      if (Number.isInteger(res)) {
+        resultado.innerHTML = res;
+      } else {
+        resultado.innerHTML = res.toFixed(2);
+      }
     }
   }
   if (unidadOrigen === unidadDestino) {
     // Impedir que el usuario seleccione la misma unidad de origen y destino
     let optionList = select2.options;
+    let uDestino = []
     for (let i = 0; i < optionList.length; i++) {
       if (optionList[i].text === unidadOrigen) {
         optionList[i].disabled = true;
         optionList[i].selected = false;
       } else {
-        unidadDestino = optionList[i].text;
-        console.log("option " + optionList[i].text)
+        uDestino.push(optionList[i].text);
+        unidadDestino = uDestino[0]
         optionList[i].disabled = false;
       }
     }
