@@ -7,6 +7,7 @@ const calcular = () => {
   const select2 = document.getElementById("selectDestino");
   let unidadDestino = select2.options[select2.selectedIndex].text;
 
+  //Función que convierte la unidad de temperatura, según la unidad de origen y de destino colocada.
   const formulas = () => {
     let temp = temperatura.value;
     let res;
@@ -59,9 +60,12 @@ const calcular = () => {
     }
   }
   formulas()
+
+  //Abrir el evento input para realizar las operaciones de la funcion formulas()
   temperatura.addEventListener("input", () => {
     formulas()
   }) 
 };
 
+//ejecutar la funcion calcular()
 calcular()
