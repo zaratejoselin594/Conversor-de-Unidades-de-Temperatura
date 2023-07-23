@@ -1,6 +1,6 @@
 # Conversor-de-Unidades-de-Temperatura
 
-Convierte unidades de temperatura de Celsius, Fahrenheit y Kelvin
+Convierte unidades de temperatura de Celsius, Fahrenheit y Kelvin.
 
 Una imagen del conversor de unidades:
 
